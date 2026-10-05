@@ -37,12 +37,23 @@ while (executando) {
 
             // TODO:
             // Verificar se a nota está entre 0 e 10
-
+            if (nota >= 0 && nota <= 10){
             // TODO:
             // Criar um objeto aluno
-
+             let Aluno {
+                Nome: nome,
+                idade: idade,
+                nota: nota
+             };
             // TODO:
             // Adicionar o aluno ao array
+            alunos.push(aluno);
+            console.log("\n Aluno Cadastrado com Sucesso!");
+            } else {"Nota Invalida! \n Insira uma nota de 0 à 10"}
+            
+
+          
+            
 
 
             break;
