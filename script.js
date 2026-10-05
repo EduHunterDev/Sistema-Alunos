@@ -151,7 +151,25 @@ while (executando) {
             //
             // Senão
             //    Reprovado
-
+            for (let i = 0; i < alunos.length; i++)
+            if (alunos.length !== 0) {
+                let situacao;
+                console.log("\n Nao existem alunos cadastrados.");
+            } else {
+                 {
+                
+                    if (alunos[i].nota >= 7) {
+                        situacao = "Aprovado";
+                    } else if (alunos[i].nota >= 5) {
+                        situacao = "Recuperacao";
+                    } else {
+                        situacao = "Reprovado";
+                    }
+                    console.log(alunos[i].nome + " -  Nota: " + alunos[i].nota + " - Situacao: " + situacao);
+                    console.log("==============");
+                
+                }
+            }
 
             break;
 
