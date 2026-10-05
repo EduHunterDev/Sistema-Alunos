@@ -49,12 +49,8 @@ while (executando) {
             // Adicionar o aluno ao array
             alunos.push(aluno);
             console.log("\n Aluno Cadastrado com Sucesso!");
-            } else {"Nota Invalida! \n Insira uma nota de 0 à 10"}
-            
-
-          
-            
-
+            } else {("Nota Invalida! \n Insira uma nota de 0 à 10")
+            }
 
             break;
 
@@ -68,7 +64,20 @@ while (executando) {
 
             // TODO:
             // Verificar se existem alunos cadastrados
+            if (alunos.length === 0){
 
+            for (let i = 0; i < alunos.length; i++){
+            console.log("==============");
+            console.log("Id " + (i + 1));
+            console.log("Nome:" + alunos[i].nome);
+            console.log("idade:" + alunos[i].idade);
+            console.log("nota:" + alunos[i].nota);
+            Console.log("==============");
+            }
+
+            }else ("\n Não existem Alunos Cadastrados!"){
+
+            }
             // TODO:
             // Percorrer o array utilizando FOR
 
@@ -88,22 +97,37 @@ while (executando) {
 
             console.log("\n--- CONSULTAR ALUNO ---");
 
-            let nomeBusca = readline.question("Digite o nome: ");
+            let nomeBusca = readline.question("Digite o nome: ").toLowerCase();
 
             let alunoEncontrado = false;
 
             // TODO:
             // Percorrer o array procurando
             // pelo nome informado.
-
             // Se encontrar:
             // - Mostrar os dados
+            for (let i = 0; i < alunos.length; i++) {
+            if (alunos[i].nome.toLowerCase() === nomeBusca) {
+                Console.log("Nome: " + alunos[i].nome);
+                Console.log("Idade: " + alunos[i].idade);
+                Console.log("Nota: " + alunos[i].nota);
+
             // - Alterar alunoEncontrado para true
-            // - Utilizar BREAK
+                alunoEncontrado = true;
+                Console.log("Aluno encontrado!");
+
+                // - Utilizar BREAK
+                break;
+            
+            
+                
+                }
+            }
 
 
             if (!alunoEncontrado) {
                 console.log("Aluno nao encontrado.");
+
             }
 
             break;
